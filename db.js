@@ -1,9 +1,6 @@
 const { Sequelize } = require('sequelize')
 
-const databaseUrl = process.env.DATABASE_URL || process.env.DB_URL
-if (!databaseUrl) {
-  throw new Error('Missing database connection string in DATABASE_URL or DB_URL')
-}
+const databaseUrl = process.env.DATABASE_URL
 
 // Database
 const sequelize = new Sequelize(
